@@ -11,13 +11,7 @@ import { cn } from "@/lib/utils";
 const poppins = Montserrat({ weight: "600", subsets: ["latin"] });
 
 
-const Sidebar = ({
-  apiLimitCount = 0,
-  isPro = false,
-}: {
-  apiLimitCount: number;
-  isPro: boolean;
-}) => {
+const Sidebar = () => {
   const pathname = usePathname();
   return (
     <div className="space-y-4 py-4 flex flex-col h-full bg-[#651b67] text-white">
