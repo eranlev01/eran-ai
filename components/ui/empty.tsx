@@ -13,8 +13,9 @@ const Empty = ({ label }: EmptyProps) => {
         <Image
           loader={() => imagesUrl.empty}
           src={imagesUrl.empty}
-          fill
           alt="Empty"
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
       <p className="text-muted-foreground text-sm text-center">{label}</p>
