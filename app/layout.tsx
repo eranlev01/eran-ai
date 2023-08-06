@@ -18,7 +18,12 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-          <body className={inter.className}>{children}</body>
+        <head>
+          <link rel="icon" href="logo.png" />
+        </head>
+        <body className={inter.className} suppressHydrationWarning>
+          {children}
+        </body>
       </html>
     </ClerkProvider>
   );
