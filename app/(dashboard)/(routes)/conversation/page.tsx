@@ -67,7 +67,7 @@ const ConversationPage = () => {
       form.reset();
     } catch (error: any) {
       if (error?.response?.status === 403) {
-        console.log(error);
+        console.log("Unahuthorized: 403", error.response.status);
       } else {
         toast.error("Something went wrong.");
       }

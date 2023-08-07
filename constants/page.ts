@@ -9,7 +9,7 @@ import {
   XOctagon
 } from "lucide-react";
 
-export const MAX_FREE_COUNTS = 5;
+const MAX_FREE_COUNTS = 5;
 
 const tools = [
   {
@@ -154,4 +154,5 @@ const imagesUrl = {
 
 };
 
-export { routes, tools, testimonials, imagesUrl };
+
+export { routes, tools, testimonials, imagesUrl, MAX_FREE_COUNTS };
