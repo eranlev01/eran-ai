@@ -26,7 +26,7 @@ export default function HomePage() {
         <span className="text-emerald-500"></span>
         <span className="bg-emerald-500/10"></span>
         <span className="text-pink-700"></span>
-        <span className="bg-pink-700/10"></span>
+        <span className="bg-pink-700/10 text-sky-500"></span>
         <span className="text-orange-700"></span>
         <span className="bg-orange-700/10"></span>
         <span className="text-green-700 bg-green-700/10"></span>
