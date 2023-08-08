@@ -1,10 +1,10 @@
 // db.ts
-import mysql from 'serverless-mysql';
+import mysql from "serverless-mysql";
 
 type QueryProp = {
-    query: string,
-    values: any
-}
+  query: string;
+  values: any;
+};
 
 const db = mysql({
   config: {
@@ -28,12 +28,17 @@ const db = mysql({
   },
 });
 
-export default async function excuteQuery({ query, values } : QueryProp) {
+export default async function excuteQuery({ query, values }: QueryProp) {
+  console.log("ENV: ", process.env.NODE_ENV);
   try {
     const results = await db.query(query, values);
     await db.end();
+    console.log("managed to query DB");
+    console.log("Query: ", query);
+    console.log("Values: ", values);
     return results;
   } catch (error) {
+    console.log("failed to query DB. error: ", error);
     return { error };
   }
 }
