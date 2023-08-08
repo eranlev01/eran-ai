@@ -22,7 +22,8 @@ import { cn } from "@/lib/utils";
 
 export const ProModal = () => {
   const proModal = useProModal();
-  const [loading, setLoading] = useState(false);
+  //Needs to be setted to false after adding api/stripe route
+  const [loading, setLoading] = useState(true);
 
   const onSubscribe = async () => {
     try {
