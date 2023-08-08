@@ -24,10 +24,12 @@ const [Heading, Input, Loader, Button, Empty, UserAvatar, BotAvatar] =
     import("@/components/user-avatar"),
     import("@/components/bot-avatar"),
   ]);
+import { useProModal } from "@/hooks/use-pro-modal";
 
 import { formSchema } from "./constants";
 
 const CodePage = () => {
+  const proModal = useProModal();
   const router = useRouter();
   const [messages, setMessages] = useState<ChatCompletionRequestMessage[]>([]);
 
@@ -54,7 +56,7 @@ const CodePage = () => {
       form.reset();
     } catch (error: any) {
       if (error?.response?.status === 403) {
-        console.log("Unauthorized: 403", error.response.status);
+          proModal.onOpen();
       } else {
         toast.error("Something went wrong.");
       }

@@ -37,6 +37,7 @@ export const LandingContent = () => {
                     <Image
                       alt=""
                       loader={() => item.image}
+                      unoptimized={true} 
                       src={item.image}
                       width={500}
                       height={500}
