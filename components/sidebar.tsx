@@ -7,11 +7,17 @@ import { usePathname } from "next/navigation";
 
 import { imagesUrl, routes } from "@/constants/page";
 import { cn } from "@/lib/utils";
+import FreeCounter from "@/components/free-counter";
 
 const poppins = Montserrat({ weight: "600", subsets: ["latin"] });
 
-
-const Sidebar = () => {
+const Sidebar = ({
+  apiLimitCount = 0,
+  isPro = false,
+}: {
+  apiLimitCount: number;
+  isPro: boolean;
+}) => {
   const pathname = usePathname();
   return (
     <div className="space-y-4 py-4 flex flex-col h-full bg-[#651b67] text-white">
@@ -23,6 +29,7 @@ const Sidebar = () => {
               alt="Logo"
               src={imagesUrl.logo}
               loader={() => imagesUrl.logo}
+              unoptimized={true}
             />
           </div>
           <h1 className={cn("text-2xl font-bold", poppins.className)}>
@@ -50,7 +57,7 @@ const Sidebar = () => {
                 {route.label}
                 {route.disabled ? (
                   <route.disabledIcon
-                    className={cn("h-4 w-4 ml-3", route.color)}
+                    className={cn("h-4 w-4 ml-3")}
                   />
                 ) : (
                   ""
@@ -60,6 +67,7 @@ const Sidebar = () => {
           ))}
         </div>
       </div>
+      <FreeCounter apiLimitCount={apiLimitCount} />
     </div>
   );
 };

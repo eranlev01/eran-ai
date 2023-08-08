@@ -10,6 +10,7 @@ const Loader = () => {
           alt="Logo"
           src={imagesUrl.logo}
           loader={() => imagesUrl.logo}
+          unoptimized={true}
           fill
         />
       </div>

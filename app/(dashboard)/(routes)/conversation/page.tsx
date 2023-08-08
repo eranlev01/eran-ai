@@ -35,9 +35,11 @@ const [Heading, Input, Loader, Button, Empty, UserAvatar, BotAvatar] =
 import { Form } from "@/components/ui/form";
 
 import { formSchema } from "./constants";
+import { useProModal } from "@/hooks/use-pro-modal";
 
 
 const ConversationPage = () => {
+  const proModal = useProModal();
   const router = useRouter();
 
   const [messages, setMessages] = useState<ChatCompletionRequestMessage[]>([]);
@@ -67,7 +69,7 @@ const ConversationPage = () => {
       form.reset();
     } catch (error: any) {
       if (error?.response?.status === 403) {
-        console.log(error);
+        proModal.onOpen();
       } else {
         toast.error("Something went wrong.");
       }
