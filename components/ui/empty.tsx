@@ -12,6 +12,7 @@ const Empty = ({ label }: EmptyProps) => {
       <div className="relative h-72 w-72">
         <Image
           loader={() => imagesUrl.empty}
+          unoptimized={true}
           src={imagesUrl.empty}
           alt="Empty"
           fill

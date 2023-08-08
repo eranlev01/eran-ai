@@ -26,6 +26,7 @@ export const LandingNavbar = () => {
             alt="Logo"
             src={imagesUrl.logo}
             loader={() => imagesUrl.logo}
+            unoptimized={true}
           />
         </div>
         <h1 className={cn("text-2xl font-bold text-white", font.className)}>
