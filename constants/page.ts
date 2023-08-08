@@ -6,7 +6,7 @@ import {
   Music,
   Settings,
   VideoIcon,
-  XOctagon
+  XOctagon,
 } from "lucide-react";
 
 const MAX_FREE_COUNTS = 5;
@@ -19,7 +19,7 @@ const tools = [
     color: "text-violet-500",
     bgColor: "bg-violet-500/10",
     disabled: false,
-    disabledIcon: XOctagon
+    disabledIcon: XOctagon,
   },
   {
     label: "Music Generation",
@@ -28,7 +28,7 @@ const tools = [
     color: "text-emerald-500",
     bgColor: "bg-emerald-500/10",
     disabled: true,
-    disabledIcon: XOctagon
+    disabledIcon: XOctagon,
   },
   {
     label: "Image Generation",
@@ -37,7 +37,7 @@ const tools = [
     bgColor: "bg-pink-700/10",
     href: "/image",
     disabled: true,
-    disabledIcon: XOctagon
+    disabledIcon: XOctagon,
   },
   {
     label: "Video Generation",
@@ -46,7 +46,7 @@ const tools = [
     bgColor: "bg-orange-700/10",
     href: "/video",
     disabled: true,
-    disabledIcon: XOctagon
+    disabledIcon: XOctagon,
   },
   {
     label: "Code Generation",
@@ -55,7 +55,7 @@ const tools = [
     bgColor: "bg-green-700/10",
     href: "/code",
     disabled: false,
-    disabledIcon: XOctagon
+    disabledIcon: XOctagon,
   },
 ];
 
@@ -66,7 +66,7 @@ const routes = [
     href: "/dashboard",
     color: "text-sky-500",
     disabled: false,
-    disabledIcon: XOctagon
+    disabledIcon: XOctagon,
   },
   {
     label: "Conversation",
@@ -74,7 +74,7 @@ const routes = [
     href: "/conversation",
     color: "text-violet-500",
     disabled: false,
-    disabledIcon: XOctagon
+    disabledIcon: XOctagon,
   },
   {
     label: "Image Generation",
@@ -82,7 +82,7 @@ const routes = [
     color: "text-pink-700",
     href: "/image",
     disabled: true,
-    disabledIcon: XOctagon
+    disabledIcon: XOctagon,
   },
   {
     label: "Video Generation",
@@ -90,7 +90,7 @@ const routes = [
     color: "text-orange-700",
     href: "/video",
     disabled: true,
-    disabledIcon: XOctagon
+    disabledIcon: XOctagon,
   },
   {
     label: "Music Generation",
@@ -98,7 +98,7 @@ const routes = [
     color: "text-emerald-500",
     href: "/music",
     disabled: true,
-    disabledIcon: XOctagon
+    disabledIcon: XOctagon,
   },
   {
     label: "Code Generation",
@@ -106,7 +106,7 @@ const routes = [
     color: "text-green-700",
     href: "/code",
     disabled: false,
-    disabledIcon: XOctagon
+    disabledIcon: XOctagon,
   },
   {
     label: "Settings",
@@ -149,10 +149,8 @@ const testimonials = [
 ];
 
 const imagesUrl = {
-  empty: "https://eran-ai-images.s3.us-east-2.amazonaws.com/empty.png",
+  empty: "https://eran-ai-images.s3.us-east-2.amazonaws.com/empty.webp",
   logo: "https://eran-ai-images.s3.us-east-2.amazonaws.com/logo.png",
-
 };
-
 
 export { routes, tools, testimonials, imagesUrl, MAX_FREE_COUNTS };
