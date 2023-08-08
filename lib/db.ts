@@ -33,6 +33,9 @@ export default async function excuteQuery({ query, values }: QueryProp) {
   try {
     const results = await db.query(query, values);
     await db.end();
+    console.log("managed to query DB");
+    console.log("Query: ", query);
+    console.log("Values: ", values);
     return results;
   } catch (error) {
     console.log("failed to query DB. error: ", error);
