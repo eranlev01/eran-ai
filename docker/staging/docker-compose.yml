@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  web-staging:
+    container_name: web-stageing
+    build:
+      context: ../../
+      dockerfile: docker/staging/Dockerfile
+    image: web-staging
+    ports:
+      - "3002:3000"
+    env_file:
+      - ../../.env
