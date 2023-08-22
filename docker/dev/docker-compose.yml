@@ -1,8 +1,9 @@
 version: "3"
 
 services:
-  web-app-dev:
-    container_name: web-app-dev
+  web-dev:
+    container_name: web-dev
+    image: web-dev
     build:
       context: ../../.
       dockerfile: docker/dev/Dockerfile
@@ -14,7 +15,7 @@ services:
       - ../../public:/app/public
     restart: always
     ports:
-      - 3000:3000
+      - 3001:3000
     networks:
       - my_network
 
